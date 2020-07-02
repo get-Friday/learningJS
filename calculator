@@ -1,0 +1,18 @@
+function calculadora(x, operacao, y) {
+    switch (operacao) {
+        case '+':
+            return soma = x + y
+        case '-':
+            return subtracao = x - y
+        case '*':
+            return multiplicacao = x * y
+        case '/':
+            return divisao = x / y
+        default:
+            return 'ERROR'
+    }
+}
+console.log(calculadora(2, '+', 3))
+console.log(calculadora(2, '-', 3))
+console.log(calculadora(2, '*', 3))
+console.log(calculadora(2, '/', 3))
