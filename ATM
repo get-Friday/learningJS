@@ -20,7 +20,7 @@ function contarNotas(valorSacar = 1) {
             break
         } else if (valorSacar < 0) {
             // Reseta em caso da cédula ser maior que o valor a sacar
-            valorSacar = valorSacar + cedulas[i]
+            valorSacar += cedulas[i]
         }
     }
 }
