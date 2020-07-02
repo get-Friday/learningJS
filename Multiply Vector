@@ -1,20 +1,12 @@
-function multiplicaVetor(vetor, inteiro) {
-    this.vetorRetorno = []
-    for (let i in vetor) {
-        vetorRetorno.push(vetor[i] * inteiro)
-    }
-    return vetorRetorno
+function multiplicaVetor(vetor, int) {
+    this.int = int
+    return this.resultado = vetor.map(v => v * int)
 }
 
-function vetorMaiorCinco() {
-    let maiorQueCinco = []
-    for (let i in vetorRetorno) {
-        if (vetorRetorno[i] > 5) {
-            maiorQueCinco.push(vetorRetorno[i])
-        }
-    }
-    return maiorQueCinco
+function maiorQueCinco(resultado) {
+    return resultado.filter(n => n > 5)
 }
+
 const vetor = [1, 2, 3, 4, 5]
 console.log(multiplicaVetor(vetor, 3))
-console.log(vetorMaiorCinco())
+console.log(maiorQueCinco(resultado))
