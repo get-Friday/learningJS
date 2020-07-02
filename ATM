@@ -1,21 +1,26 @@
-function contarNotas(valor = 1) {
+function contarNotas(valorSacar = 1) {
     const cedulas = [100, 50, 10, 5, 1]
     this.qntCedulas = [0, 0, 0, 0, 0]
-    for (var i = 0; i <= cedulas.length && valor >= 0; i++) {
+    for (var i = 0; i <= cedulas.length && valorSacar >= 0; i++) {
         if (i == 5) {
+            // reseta loop
             i = 0;
         }
-        valor = valor - cedulas[i]
-        if (valor > 0) {
+        valorSacar = valorSacar - cedulas[i]
+        if (valorSacar > 0) {
+            // adiciona cédula caso ainda houver valor a sacar
             qntCedulas[i]++
-            if (valor - cedulas[i] > 0) {
+            if (valorSacar - cedulas[i] > 0) {
+                // volta uma casa no loop para caso ouver mais da mesma cédula para sacar
                 i--
             }
-        } else if (valor === 0) {
+        } else if (valorSacar === 0) {
+            // Encerra quando o valor a sacar for zerado
             qntCedulas[i]++
             break
-        } else if (valor < 0) {
-            valor = valor + cedulas[i]
+        } else if (valorSacar < 0) {
+            // Reseta em caso da cédula ser maior que o valor a sacar
+            valorSacar = valorSacar + cedulas[i]
         }
     }
 }
