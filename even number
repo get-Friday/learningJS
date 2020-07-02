@@ -1,9 +1,18 @@
-function encontrarPares() {
-    for (i = 1; i <= 100; i++) {
-        if (i % 2 === 0) {
-            console.log(i)
-        }
+function criaVetor(inicio, fim) {
+    if (inicio > fim) {
+        inicio += fim
+        fim = inicio - fim
+        inicio = inicio - fim
+    }
+    this.vetor = []
+    for (let i = inicio; i <= fim; i++) {
+        vetor.push(i)
     }
 }
 
-encontrarPares()
+function selecionaNumeros(inicio = 0, fim = 100) {
+    criaVetor(inicio, fim)
+    return vetor.filter(n => n % 2 != 0)
+}
+
+console.log(selecionaNumeros(19, 3))
